@@ -1,4 +1,4 @@
-### My doftfiles for vim, zsh and tmux
+### doftfiles for vim, zsh and tmux
 
 - Do `brew install zsh-syntax-highlighting` or remove sourcing line from zshrc if not required.
 
