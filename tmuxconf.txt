@@ -1,0 +1,30 @@
+set -g default-terminal "screen-256color"
+set-window-option -g mode-keys vi
+
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+# make more sensible vertical and horizontal pane keybinds
+unbind %
+unbind '"'
+bind-key | split-window -h
+bind-key - split-window -v
+
+# Enable mouse navigation 
+#set-option -g mouse on
+
+# force reload of config file
+unbind r
+bind C-r source-file ~/.tmux.conf
+
+# Shift+arrow to switch windows
+bind -n S-Left  previous-window
+bind -n S-Right next-window
+
+# keep pane ID numbers up longer to give more time to pick a pane
+set display-panes-time 4000
+
+# moar scrollback history!!!
+set -g history-limit 130000
+
